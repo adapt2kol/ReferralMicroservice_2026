@@ -1,0 +1,43 @@
+{
+  "name": "referralos",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx execution/migrate.ts",
+    "db:seed": "tsx execution/seed.ts",
+    "smoke:core": "tsx execution/smoke_core.ts",
+    "smoke:webhooks": "tsx execution/smoke_webhooks.ts",
+    "worker:webhook": "tsx execution/webhook_worker.ts",
+    "worker:webhook:once": "SINGLE_RUN=true tsx execution/webhook_worker.ts",
+    "embed:link": "tsx execution/gen_embed_link.ts",
+    "smoke:e2e": "tsx execution/smoke_e2e.ts"
+  },
+  "dependencies": {
+    "next": "^14.2.21",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "drizzle-orm": "^0.38.3",
+    "pg": "^8.13.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/pg": "^8.11.10",
+    "@types/react": "^18.3.17",
+    "@types/react-dom": "^18.3.5",
+    "typescript": "^5.7.2",
+    "drizzle-kit": "^0.30.1",
+    "tsx": "^4.19.2",
+    "tailwindcss": "^3.4.17",
+    "postcss": "^8.4.49",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.21"
+  },
+  "packageManager": "pnpm@10.26.2"
+}
